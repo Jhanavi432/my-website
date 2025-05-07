@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/77d311a592.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="images/logo2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header" >Home</a></li>
+                <li><a href="#about" >About</a></li>
+                <li><a href="#services" >Services</a></li>
+                <li><a href="#certifications" >Certifications</a></li>
+                <li><a hre="#">Projects</a></li>
+                <li><a href="#contact" >Contact</a></li>  
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="header-text">
+            <h1>Hi ,I'm <span>Jhanavi </span><br>Shriwastava from India</h1>
+            <a href="https://docs.google.com/document/d/1mLBNGqLJfnD9ipxxbu78YrqSXAYBPdOZ/export?format=pdf
+            " class="btn btn2" download="Jhanavi_CV.pdf">Download CV</a>
+        </div>
+
+        </div>
+    </div>
+    <!-----about me-->
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/use1.jpg">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Hello! I'm Jhanavi Shriwastava, currently a student at MIT-WPU pursuing a B.Tech in Computer Science and Engineering, with an expected graduation in 2026. I’m passionate about backend development and system integration, with a logical and problem-solving mindset. Known for being dedicated, detail-oriented, and consistently committed to delivering high-quality outcomes. I have hands-on experience building projects using Python, Flask, MySQL, and modern web technologies. Beyond academics, I enjoy music, traveling, and engaging in creative, collaborative activities.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/Jhanavi432" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a> |
+                        <a href="https://www.linkedin.com/in/jhanavi-shriwastava-639866289/" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Programming Languages:</span><br> Python, C, C++, SQL, HTML, CSS, Java</li>
+                            <li><span>Web & Software Development:</span><br> Flask, MERN Stack (MongoDB, Express.js, React, Node.js)</li>
+                            <li><span>Machine Learning & Data Science:</span><br> Scikit-learn, NumPy, Pandas, Algorithms, Matplotlib, Seaborn, OpenCV, TensorFlow, NLTK</li>
+                            <li><span>Databases & Tools:</span><br> MySQL, MongoDB, APIs, Git, Tableau, Power BI</li>
+                            <li><span>Soft Skills:</span><br> Leadership, Communication, Team Management</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Degree:</span> <br>B.Tech in Computer Science</li>
+                            <li><span>Institution:</span> <br>MIT-WPU (Maharashtra Institute of Technology, World Peace University)</li>
+                            <li><span>Location:</span> <br>Pune, India</li>
+                            <li><span>Expected Graduation:</span> <br>2026</li>
+                            <li><span>Specialization:</span> <br>Computer Science and Engineering</li>
+                            
+                            <li><span>CGPA:</span> <br>8.08/10 (August 2022-May 2025)</li>
+                            <li><span>10th Grade[2019-2020]:</span> <br>92.2%(CBSE)</li>
+                            <li><span>12th Grade[2021-2022]:</span><br> 92.6%(CBSE)</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Projects">
+                        <ul>
+                            <li>
+                                <span>AI in ICU Management - Sepsis Prediction</span><br>
+                                Built a machine learning model to predict sepsis in ICU patients using a Kaggle dataset. Utilized Logistic Regression, Random Forest, XGBoost, LightGBM, CatBoost, and ensemble techniques (Stacking and Voting Classifiers). Achieved 99% accuracy and AUC-ROC > 0.99, improving early sepsis detection for critical care.<br>
+                                <strong>Technologies:</strong> Python, Scikit-learn, XGBoost, LightGBM, CatBoost, Ensemble Learning, Google Colab
+                            </li>
+                        
+                            <li>
+                                <span>Business Cards Management System</span><br>
+                                Developed a system to manage business card data with CRUD operations and company-based grouping. Enabled efficient search using tagging, NER, and rule-based categorization.<br>
+                                <strong>Technologies:</strong> Python, OpenCV, Tesseract-OCR, MongoDB, Google Colab, NER
+                            </li>
+                        
+                            <li>
+                                <span>Protein Secondary Structure Prediction (Deep Learning & MERN Stack)</span><br>
+                                Developed a hybrid deep learning model (CNN-BiLSTM-BiGRU) to predict protein secondary structures (H, E, C) from amino acid sequences. Achieved 66.7% Q3 accuracy, outperforming benchmark studies. Deployed using the MERN stack for real-time user interaction and visualization.<br>
+                                <strong>Technologies:</strong> Deep Learning (CNN, BiLSTM, BiGRU), MERN Stack (MongoDB, Express.js, React, Node.js)
+                            </li>
+                        
+                            <li>
+                                <span>Movie Recommendation System</span><br>
+                                Developed a content-based recommendation system using cosine similarity to suggest movies. Integrated user authentication and filtering options based on movie input or release year.<br>
+                                <strong>Technologies:</strong> Python, Pandas, NumPy, Scikit-learn, Flask, MySQL, TMDB API
+                            </li>
+                        
+                        
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!---services-->
+<div id="services">
+    <div id="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Web Development</h2>
+                <div class="tech-logos">
+                    <img src="images/html.png" alt="HTML Logo" title="HTML">
+                    <img src="images/css.png" alt="CSS Logo" title="CSS">
+                    <img src="images/py.png" alt="Python Logo" title="Python">
+                    <img src="images/sql.png" alt="SQL Logo" title="SQL">
+                    <img src="images/mongo.png" alt="MongoDB Logo" title="MongoDB">
+                    <img src="images/flask.png" alt="flask logo" title="flask">
+                    <img src="images/react.png" alt="React Logo" title="React">
+                    <img src="images/node.png" alt="Node.js Logo" title="Node.js">
+                    <img src="images/express.png" alt="Express.js Logo" title="Express.js">
+                    
+                    
+                    <img src="images/git.png" alt="Git Logo" title="Git">
+                </div>
+                </div>
+                <div>
+                    <i class="fas fa-app"></i>
+                    <h2>Machine Learning and Data Science</h2>
+                    <div class="tech-logos">
+                        <img src="images/py.png" alt="Python Logo" title="Python">
+                        <img src="images/numpy.png" alt="NumPy Logo" title="NumPy">
+                        <img src="images/pandas.png" alt="Pandas Logo" title="Pandas">
+                        <img src="images/scikit.png" alt="Scikit-learn Logo" title="Scikit-learn">
+                        <img src="images/tensorflow.png" alt="TensorFlow Logo" title="TensorFlow">
+                        
+                        <img src="images/matplotlib.png" alt="Matplotlib Logo" title="Matplotlib">
+                        <img src="images/seaborn.png" alt="Seaborn Logo" title="Seaborn">
+                        <img src="images/opencv.png" alt="OpenCV Logo" title="OpenCV">
+                        <img src="images/nltk.png" alt="NLTK Logo" title="NLTK">
+                    </div>
+                </div>
+                <!-- Databases & Tools -->
+            <div>
+                <i class="fas fa-database"></i>
+                <h2>Databases & Tools</h2>
+                <div class="tech-logos">
+                    <img src="images/mysql.png" alt="MySQL Logo" title="MySQL">
+                    <img src="images/mongo.png" alt="MongoDB Logo" title="MongoDB">
+                    <img src="images/api.png" alt="API Logo" title="APIs">
+                    <img src="images/git.png" alt="Git Logo" title="Git">
+                    <img src="images/tableau.png" alt="Tableau Logo" title="Tableau">
+                    <img src="images/powerbi.png" alt="PowerBI Logo" title="PowerBI">
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div> 
+
+    <!----Certifications-->
+<div id="certifications">
+    <div class="container">
+        <h1 class="subtitle">Certifications</h1>
+        <div class="certifications-container">
+            <div class="certificate-card">
+                <img src="images/machine1.jpg" alt="Advanced Learning Algorithms Certification">
+                <p><strong>Advanced Learning Algorithms</strong> - Coursera, DeepLearning.AI (Mar 29, 2024)</p>
+                <a href="images/machine1.jpg" target="_blank">View Certificate (PDF)</a> |
+                <a href="https://coursera.org/verify/K9DF57B5WS7E" target="_blank">Verify Certification</a>
+            </div>
+            <div class="certificate-card">
+                <img src="images/machine2.jpg" alt="Supervised Machine Learning Certification">
+                <p><strong>Supervised Machine Learning: Regression and Classification</strong> - Coursera, DeepLearning.AI (Mar 3, 2024)</p>
+                <a href="images/machine2.jpg" target="_blank">View Certificate (PDF)</a> |
+                <a href="https://coursera.org/verify/QXFSS2U9XVPP" target="_blank">Verify Certification</a>
+            </div>
+            <div class="certificate-card">
+                <img src="images/powerbi.jpg" alt="Data Visualization with PowerBI Certificate">
+                <p><strong>Data Visualization with PowerBI</strong> - Simplilearn (Apr 15, 2024)</p>
+                <a href="images/powerbi.jpg" target="_blank">View Certificate (PDF)</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!----contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>jhanavi2708@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>6354936778</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/jhanavi_sh"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jhanavi-shrivastav-639866289/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://x.com/JhanaviShr"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/jhanavi.shrivastav.5"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    
+
+                </div>
+                <div class="contact-right col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-input" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control form-input" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control form-textarea" id="message" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn2">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    
+</body>
+</html>
